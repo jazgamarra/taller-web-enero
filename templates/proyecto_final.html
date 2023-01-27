@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-700 text-white flex justify-center">
+
+    <div class="flex flex-wrap">
+    {%  for personaje in lista_de_personajes:  %}
+        <!--  TARJETA DE PERSONAJE -->
+        <div class="bg-slate-500 m-10 text-center w-64 p-2 rounded-xl">
+            <h1 class="text-xl	font-mono	break-all"> {{personaje['name']}} </h1>
+            <p> Especie: {{ personaje['species'] }} </p>
+            <img class=" rounded-xl" src="{{ personaje['image'] }}" alt="{{personaje['name']}}" > 
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html>
